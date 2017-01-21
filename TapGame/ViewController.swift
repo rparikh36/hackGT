@@ -34,23 +34,31 @@ class ViewController: UIViewController {
         if (time == 0) {
             timer.invalidate()
             isGameStarted = false
+            gameButton.setTitle("RESET", for: .normal)
+            gameButton.isEnabled = true
         }
     }
     
     //increments player 2 count
     @IBAction func countPlayer2(_ sender: UIButton) {
-        count2 += 1;
-        updateUI()
+        if isGameStarted {
+            count2 += 1;
+            updateUI()
+        }
     }
     
     //increments player 1 count
     @IBAction func countPlayer1(_ sender: UIButton) {
-        count1 += 1;
-        updateUI()
+        if isGameStarted {
+            count1 += 1;
+            updateUI()
+        }
     }
     
     //button for starting the game
     @IBAction func startButton(_ sender: UIButton) {
+        gameButton.setTitle("START", for: .normal)
+        gameButton.isEnabled = false
         isGameStarted = true
         time = 10
         count1 = 0
@@ -64,11 +72,6 @@ class ViewController: UIViewController {
         if isGameStarted {
             player1.text = "Player 1: \(count1)"
             player2.text = "Player 2: \(count2)"
-            gameButton.isEnabled = false
-        } else {
-            playerButton1.isEnabled = false
-            playerButton2.isEnabled = false
-            gameButton.isEnabled = true
         }
     }
 }
