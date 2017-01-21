@@ -35,21 +35,36 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tcV-eN-P7u">
                                         <rect key="frame" x="0.0" y="222.5" width="375" height="222"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQr-Rb-AWJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="222"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uEr-sX-uvU">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="222"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQr-Rb-AWJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="94" height="222"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="wQr-Rb-AWJ" firstAttribute="centerX" secondItem="uEr-sX-uvU" secondAttribute="centerX" id="DWy-6d-VZF"/>
+                                                    <constraint firstItem="wQr-Rb-AWJ" firstAttribute="centerY" secondItem="uEr-sX-uvU" secondAttribute="centerY" id="vEN-j4-uMr"/>
+                                                </constraints>
+                                            </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUt-zd-OcE">
-                                                <rect key="frame" x="125" y="0.0" width="125" height="222"/>
+                                                <rect key="frame" x="94" y="0.0" width="93.5" height="222"/>
                                                 <state key="normal" title="Start"/>
                                                 <connections>
                                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M1g-Qs-9sS"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m82-Pe-EXq">
+                                                <rect key="frame" x="187.5" y="0.0" width="94" height="222"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2 Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEh-SA-CFF">
-                                                <rect key="frame" x="250" y="0.0" width="125" height="222"/>
+                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="222"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -78,6 +93,9 @@
                         <outlet property="gameButton" destination="RUt-zd-OcE" id="ZNb-LK-1Ke"/>
                         <outlet property="player1" destination="wQr-Rb-AWJ" id="t6U-Mi-kcS"/>
                         <outlet property="player2" destination="uEh-SA-CFF" id="Hw0-Gs-EHm"/>
+                        <outlet property="playerButton1" destination="dDX-2V-DQh" id="qPC-TU-kih"/>
+                        <outlet property="playerButton2" destination="C0o-WG-zqV" id="SR1-YV-fdZ"/>
+                        <outlet property="timeLabel" destination="m82-Pe-EXq" id="lRE-EB-8VU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
