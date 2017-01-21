@@ -9,12 +9,33 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var playerButton2: UIButton!
+    @IBOutlet weak var playerButton1: UIButton!
     @IBOutlet weak var player1: UILabel!
     @IBOutlet weak var player2: UILabel!
     @IBOutlet weak var gameButton: UIButton!
-    var count1 = 0
-    var count2 = 0
+    @IBOutlet weak var timeLabel: UILabel!
+    var count1 = Int()
+    var count2 = Int()
     var isGameStarted = false;
+    var timer = Timer()
+    var time = Int()
+
+    //timer
+    func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.counter), userInfo: nil, repeats: true)
+    }
+    
+    //counter
+    func counter() {
+        time -= 1
+        timeLabel.text = "Time \(time)"
+        if (time == 0) {
+            timer.invalidate()
+            isGameStarted = false
+        }
+    }
     
     //increments player 2 count
     @IBAction func countPlayer2(_ sender: UIButton) {
@@ -30,30 +51,25 @@ class ViewController: UIViewController {
     
     //button for starting the game
     @IBAction func startButton(_ sender: UIButton) {
-        sender.isEnabled = false;
-        if !isGameStarted {
-            updateUI()
-            isGameStarted = true
-            gameButton.setTitle("Reset",for: .normal)
-        } else {
-            reset()
-        }
+        isGameStarted = true
+        time = 10
+        count1 = 0
+        count2 = 0
+        startTimer()
+        updateUI()
     }
     
     //updates scores
     func updateUI() {
-        player1.text = "Player 1: \(count1)"
-        player2.text = "Player 2: \(count2)"
-    }
-    
-    //reset game stats
-    func reset() {
-        gameButton.setTitle("Start",for: .normal)
-        isGameStarted = false;
-        count1 = 0
-        count2 = 0
-        player1.text = "Player 1: \(count1)"
-        player2.text = "Player 2: \(count2)"
+        if isGameStarted {
+            player1.text = "Player 1: \(count1)"
+            player2.text = "Player 2: \(count2)"
+            gameButton.isEnabled = false
+        } else {
+            playerButton1.isEnabled = false
+            playerButton2.isEnabled = false
+            gameButton.isEnabled = true
+        }
     }
 }
 
