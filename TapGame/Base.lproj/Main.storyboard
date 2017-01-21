@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -27,7 +27,10 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDX-2V-DQh">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="222.5"/>
-                                        <state key="normal" title="Player 1"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="34"/>
+                                        <state key="normal" title="PLAYER 1">
+                                            <color key="titleColor" red="0.3701138841531274" green="0.22002660801739701" blue="0.99835759401321411" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="countPlayer1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T3L-AW-813"/>
                                         </connections>
@@ -35,24 +38,18 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tcV-eN-P7u">
                                         <rect key="frame" x="0.0" y="222.5" width="375" height="222"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uEr-sX-uvU">
-                                                <rect key="frame" x="0.0" y="0.0" width="94" height="222"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQr-Rb-AWJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="94" height="222"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="wQr-Rb-AWJ" firstAttribute="centerX" secondItem="uEr-sX-uvU" secondAttribute="centerX" id="DWy-6d-VZF"/>
-                                                    <constraint firstItem="wQr-Rb-AWJ" firstAttribute="centerY" secondItem="uEr-sX-uvU" secondAttribute="centerY" id="vEN-j4-uMr"/>
-                                                </constraints>
-                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQr-Rb-AWJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="222"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUt-zd-OcE">
-                                                <rect key="frame" x="94" y="0.0" width="93.5" height="222"/>
-                                                <state key="normal" title="Start"/>
+                                                <rect key="frame" x="125" y="0.0" width="125" height="222"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="29"/>
+                                                <state key="normal" title="START">
+                                                    <color key="titleColor" red="0.99835759401321411" green="0.3951299191018624" blue="0.43311891223986437" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M1g-Qs-9sS"/>
                                                 </connections>
@@ -64,8 +61,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2 Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEh-SA-CFF">
-                                                <rect key="frame" x="281.5" y="0.0" width="93.5" height="222"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="250" y="0.0" width="125" height="222"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -73,7 +70,10 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0o-WG-zqV">
                                         <rect key="frame" x="0.0" y="444.5" width="375" height="222.5"/>
-                                        <state key="normal" title="Player 2"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="34"/>
+                                        <state key="normal" title="PLAYER 2">
+                                            <color key="titleColor" red="0.3701138841531274" green="0.22002660801739701" blue="0.99835759401321411" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="countPlayer2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jSU-kG-Sgw"/>
                                         </connections>
@@ -81,7 +81,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.67512822414750051" green="0.74355137875622179" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dI8-Z3-FQx" secondAttribute="bottom" id="bKm-qS-D4M"/>
                             <constraint firstItem="dI8-Z3-FQx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="mze-5k-785"/>
