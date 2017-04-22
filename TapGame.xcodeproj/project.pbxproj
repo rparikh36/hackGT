@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103124A11E3C72A600C333B6 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103124A01E3C72A600C333B6 /* StartViewController.swift */; };
 		C58DE9571E33C3A3007FE45A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58DE9561E33C3A3007FE45A /* AppDelegate.swift */; };
 		C58DE9591E33C3A3007FE45A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58DE9581E33C3A3007FE45A /* ViewController.swift */; };
 		C58DE95C1E33C3A3007FE45A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C58DE95A1E33C3A3007FE45A /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		103124A01E3C72A600C333B6 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		C58DE9531E33C3A2007FE45A /* TapGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58DE9561E33C3A3007FE45A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C58DE9581E33C3A3007FE45A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				C58DE9561E33C3A3007FE45A /* AppDelegate.swift */,
 				C58DE9581E33C3A3007FE45A /* ViewController.swift */,
+				103124A01E3C72A600C333B6 /* StartViewController.swift */,
 				C58DE95A1E33C3A3007FE45A /* Main.storyboard */,
 				C58DE95D1E33C3A3007FE45A /* Assets.xcassets */,
 				C58DE95F1E33C3A3007FE45A /* LaunchScreen.storyboard */,
@@ -189,10 +192,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = "Risha Parikh";
+				ORGANIZATIONNAME = RPKL;
 				TargetAttributes = {
 					C58DE9521E33C3A2007FE45A = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3535BPJH56;
 						ProvisioningStyle = Automatic;
 					};
 					C58DE9661E33C3A3007FE45A = {
@@ -259,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				103124A11E3C72A600C333B6 /* StartViewController.swift in Sources */,
 				C58DE9591E33C3A3007FE45A /* ViewController.swift in Sources */,
 				C58DE9571E33C3A3007FE45A /* AppDelegate.swift in Sources */,
 			);
@@ -410,6 +415,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3535BPJH56;
 				INFOPLIST_FILE = TapGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RPKL.TapGame;
@@ -422,6 +429,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 3535BPJH56;
 				INFOPLIST_FILE = TapGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RPKL.TapGame;
@@ -503,6 +512,7 @@
 				C58DE97D1E33C3A3007FE45A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C58DE97E1E33C3A3007FE45A /* Build configuration list for PBXNativeTarget "TapGameTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +521,7 @@
 				C58DE9801E33C3A3007FE45A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C58DE9811E33C3A3007FE45A /* Build configuration list for PBXNativeTarget "TapGameUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +530,7 @@
 				C58DE9831E33C3A3007FE45A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
